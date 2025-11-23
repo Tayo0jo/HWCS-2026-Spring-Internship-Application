@@ -6,8 +6,8 @@
 export class Widget {
   /**
    * Create an instance of a Widget.
-   * @param {HTMLElement} container - The container element for this widget
-   * @param {WidgetPage} page - The page that contains this widget
+  * @param {HTMLElement} container: The container element for this widget
+  * @param {WidgetPage} page: The page that contains this widget
    */
   constructor(container, page) {
     this.container = container;

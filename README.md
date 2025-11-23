@@ -1,4 +1,4 @@
-# Variable Widget – Hello World CS Application
+# Variable Widget: Hello World CS Application
 
 This repository contains my submission for the **Spring 2026 Curriculum Development Intern** position at **Hello World CS**.
 
@@ -33,7 +33,7 @@ I am **currently taking an Educational Technology course**, which has helped me 
 - Scaffolding concepts for younger learners
 - Designing simple interactions that support understanding instead of distracting from it
 
-This assignment was a fun way to connect that course with my CS background. I enjoy working at the intersection of **education and technology**, and I am excited about the chance to support K–12 students who are just starting their CS journey.
+	This assignment was a fun way to connect that course with my CS background. I enjoy working at the intersection of **education and technology**, and I am excited about the chance to support K12 students who are just starting their CS journey.
 
 ---
 
@@ -73,4 +73,4 @@ Notes:
 
 ## Final Note
 
-Thank you for reviewing my submission - I’m excited to hear back and appreciate your time and consideration.
+Thank you for reviewing my submission. I’m excited to hear back and appreciate your time and consideration.

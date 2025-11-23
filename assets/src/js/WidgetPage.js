@@ -1,4 +1,7 @@
-const CONFIG = { course: "ai-story-studio-6-8", project: "ai-story-studio-6-8" };
+const CONFIG = {
+  course: "ai-story-studio-6-8",
+  project: "ai-story-studio-6-8",
+};
 
 /**
  * Represents a widget page that manages audio, UI, and 1 or more widget.
@@ -7,11 +10,10 @@ const CONFIG = { course: "ai-story-studio-6-8", project: "ai-story-studio-6-8" }
 export class WidgetPage {
   /**
    * Create an instance of WidgetPage.
-   * @param {string} title - The title of the widget page
-   * @param {HTMLElement} container - The container element for the widget page, usually the body element
+   * @param {string} title: The title of the widget page
+   * @param {HTMLElement} container: The container element for the widget page, usually the body element
    */
   constructor(title, container) {
-
     // Add title and container as attributes
     this.title = title;
     this.container = container;
@@ -28,10 +30,12 @@ export class WidgetPage {
     // Define correct, action sounds
     this.correctSound = new Audio(this.getAssetPath("correct.mp3", "shared"));
     this.actionSound = new Audio(this.getAssetPath("action.mp3", "shared"));
-    this.incorrectSound = new Audio(this.getAssetPath("incorrect.wav", "shared"));
+    this.incorrectSound = new Audio(
+      this.getAssetPath("incorrect.wav", "shared")
+    );
 
     // Find all continue buttons
-    this.continueButtons = this.container.querySelectorAll('.button-continue');
+    this.continueButtons = this.container.querySelectorAll(".button-continue");
 
     // Create a list to store widgets
     this.widgets = [];
@@ -44,41 +48,46 @@ export class WidgetPage {
    * Initialize event listeners
    */
   init() {
-    window.addEventListener('resize', this.handleResize.bind(this));
+    window.addEventListener("resize", this.handleResize.bind(this));
     this.continueButtons.forEach((continueButton) => {
-      continueButton.addEventListener('click', this.revealNextSection);
+      continueButton.addEventListener("click", this.revealNextSection);
     });
   }
 
   /**
    * Generate asset paths based on the current environment.
-   * @param {string} filename - The name of the asset file
-   * @param {string} prefix - The prefix path for the asset
+   * @param {string} filename: The name of the asset file
+   * @param {string} prefix: The prefix path for the asset
    * @returns {string} The complete asset path
    */
   getAssetPath(filename, prefix) {
-    const developmentRoot = '../..';
+    const developmentRoot = "../..";
     const productionRoot = `/assets/courses/${CONFIG.course}/${CONFIG.project}/assets/widgets/`;
 
-    const environment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'DEVELOPMENT' : 'PRODUCTION';
-    const root = (environment === 'DEVELOPMENT') ? developmentRoot : productionRoot;
+    const environment =
+      window.location.hostname === "localhost" ||
+      window.location.hostname === "127.0.0.1"
+        ? "DEVELOPMENT"
+        : "PRODUCTION";
+    const root =
+      environment === "DEVELOPMENT" ? developmentRoot : productionRoot;
 
-    const cleanRoot = root.replace(/\/+$/, '');
-    const cleanPrefix = prefix.replace(/^\/+|\/+$/g, '');
-    const cleanFilename = filename.replace(/^\/+|\/+$/g, '');
+    const cleanRoot = root.replace(/\/+$/, "");
+    const cleanPrefix = prefix.replace(/^\/+|\/+$/g, "");
+    const cleanFilename = filename.replace(/^\/+|\/+$/g, "");
 
     return `${cleanRoot}/${cleanPrefix}/${cleanFilename}`;
   }
 
   /**
    * Register widget elements on the page.
-   * @param {string} selector - CSS selector for widget containers
-   * @param {class} widgetType - The class constructor for the widget element
+   * @param {string} selector: CSS selector for widget containers
+   * @param {class} widgetType: The class constructor for the widget element
    * @returns {Array} Array of initialized widget elements
    */
   registerWidget(selector, widgetType) {
     const widgetContainers = this.container.querySelectorAll(selector);
-    widgetContainers.forEach(container => {
+    widgetContainers.forEach((container) => {
       try {
         const widget = new widgetType(container, this);
         this.widgets.push(widget);
@@ -91,22 +100,24 @@ export class WidgetPage {
 
   /**
    * Reveal the next section when a continue button is clicked.
-   * @param {Event} event - The click event
+   * @param {Event} event: The click event
    */
   revealNextSection(event) {
-    const button = event.target.closest('button');
-    const nextSection = button.closest('section').nextElementSibling;
+    const button = event.target.closest("button");
+    const nextSection = button.closest("section").nextElementSibling;
     if (!nextSection) {
       return;
     }
 
-    nextSection.style.display = 'flex';
+    nextSection.style.display = "flex";
     button.remove();
 
     // Smooth scroll to the next section if animations are enabled
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
     if (!prefersReducedMotion) {
-      nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      nextSection.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
 
@@ -147,14 +158,13 @@ export class WidgetPage {
       ctx.fillStyle = particle.color;
       ctx.fillRect(particle.x, particle.y, particle.size, particle.size);
       particle.y += particle.speed;
-      if (particle.y > this.canvas.height)
-        this.confettiParticles.splice(i, 1);
+      if (particle.y > this.canvas.height) this.confettiParticles.splice(i, 1);
     });
 
     if (this.confettiParticles.length > 0) {
       requestAnimationFrame(this.drawConfetti);
     }
-  }
+  };
 
   /**
    * Create a canvas element for confetti animation.
@@ -186,8 +196,8 @@ export class WidgetPage {
   }
 
   /**
- * Play the incorrect sound effect
- */
+   * Play the incorrect sound effect
+   */
   playIncorrectSound() {
     this.incorrectSound.play();
   }
@@ -196,7 +206,7 @@ export class WidgetPage {
    * Handle window resize events by notifying all widget elements.
    */
   handleResize() {
-    this.widgets.forEach(widget => {
+    this.widgets.forEach((widget) => {
       widget.onResize();
     });
   }
