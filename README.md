@@ -1,4 +1,3 @@
-
 # Variable Widget – Hello World CS Application
 
 This repository contains my submission for the **Spring 2026 Curriculum Development Intern** position at **Hello World CS**.
@@ -24,15 +23,15 @@ I followed the structure and style of the existing template and kept the code un
 
 I am a Computer Science student with experience in:
 
-- HTML, CSS, and JavaScript  
-- Building small interactive learning tools  
+- HTML, CSS, and JavaScript
+- Building small interactive learning tools
 - Explaining technical ideas to beginners
 
 I am **currently taking an Educational Technology course**, which has helped me think more carefully about:
 
-- Writing clear learning objectives  
-- Scaffolding concepts for younger learners  
-- Designing simple interactions that support understanding instead of distracting from it  
+- Writing clear learning objectives
+- Scaffolding concepts for younger learners
+- Designing simple interactions that support understanding instead of distracting from it
 
 This assignment was a fun way to connect that course with my CS background. I enjoy working at the intersection of **education and technology**, and I am excited about the chance to support K–12 students who are just starting their CS journey.
 
@@ -42,9 +41,9 @@ This assignment was a fun way to connect that course with my CS background. I en
 
 The Curriculum Development Intern role is a strong match for what I like to do:
 
-- Build interactive widgets with HTML, CSS, and JavaScript  
-- Collaborate on curriculum that is accessible and equitable  
-- Turn abstract CS concepts into friendly, hands-on activities  
+- Build interactive widgets with HTML, CSS, and JavaScript
+- Collaborate on curriculum that is accessible and equitable
+- Turn abstract CS concepts into friendly, hands-on activities
 
 I especially like that Hello World CS focuses on **equity-focused curriculum** and on making CS feel welcoming to more students. That aligns with the kind of impact I would like to have as I grow as an educator and engineer.
 
@@ -74,5 +73,4 @@ Notes:
 
 ## Final Note
 
-Thank you for reviewing my submission — I’m excited to hear back and appreciate your time and consideration.
-
+Thank you for reviewing my submission - I’m excited to hear back and appreciate your time and consideration.

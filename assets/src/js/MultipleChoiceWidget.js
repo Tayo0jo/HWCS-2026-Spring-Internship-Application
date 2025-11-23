@@ -178,7 +178,7 @@ export class MultipleChoiceWidget extends Widget {
       btn.addEventListener("click", () => {
         this.currentProblemIndex += 1;
         if (this.currentProblemIndex >= this.problems.length) {
-          // No more problems — optionally hide or show a completion state
+          // No more problems - optionally hide or show a completion state
           this.elements.feedbackCorrect.textContent = "All done! Great work.";
           btn.remove();
           return;

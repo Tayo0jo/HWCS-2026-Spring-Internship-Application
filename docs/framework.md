@@ -6,7 +6,7 @@ Use your **Widget Page** to write supporting text, but implement any core intera
 
 ## Widget Page
 
-A **Widget Page** is an interactive page for displaying content—such as text and images—in small sections that are revealed one at a time. A **Widget Page** can embed one or more [**Widgets**](#widget) as part of its content.
+A **Widget Page** is an interactive page for displaying content - such as text and images - in small sections that are revealed one at a time. A **Widget Page** can embed one or more [**Widgets**](#widget) as part of its content.
 
 ### Widget Page Elements
 
