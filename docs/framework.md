@@ -1,6 +1,6 @@
 # Framework
 
-Your webpage will be a [**Widget Page**](#widget-page) that embeds one or more [**Widgets**](#widget). 
+Your webpage will be a [**Widget Page**](#widget-page) that embeds one or more [**Widgets**](#widget).
 
 Use your **Widget Page** to write supporting text, but implement any core interactions as **Widgets** embedded on your **Widget Page**.
 
@@ -69,7 +69,7 @@ An **image** element displays an image. To create an **image**, apply the `image
 <body>
   <div class="column column-md">
     <section>
-      <img class="image" src="katherine-johnson-1.jpg">
+      <img class="image" src="katherine-johnson-1.jpg" />
     </section>
   </div>
 </body>
@@ -86,9 +86,18 @@ A **continue button** reveals the next section when it is clicked. Use the `butt
       <!-- Section content -->
       <button class="button-semantic button-primary button-continue">
         <span class="button-text">Continue</span>
-        <svg class="button-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 8L14.59 6.59L9 12.17V0H7V12.17L1.42 6.58L0 8L8 16L16 8Z" fill="white" />
+        <svg
+          class="button-icon"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M16 8L14.59 6.59L9 12.17V0H7V12.17L1.42 6.58L0 8L8 16L16 8Z"
+            fill="white"
+          />
         </svg>
       </button>
     </section>
@@ -121,8 +130,8 @@ First, in the `head` of the page, add the multiple choice widget styles, defined
 
 ```html
 <head>
-	<!-- ... -->
-	<link rel="stylesheet" href="../css/multiple-choice-widget.css">
+  <!-- ... -->
+  <link rel="stylesheet" href="../css/multiple-choice-widget.css" />
 </head>
 ```
 
@@ -130,12 +139,12 @@ Then, in the `body`, add the HTML that will compose the multiple choice widget.
 
 ```html
 <body>
-	<section>
-        <!-- Widget page content -->
-        <div class="widget multiple-choice-widget">
-            <!-- Matching widget HTML -->
-        </div>
-	</section>
+  <section>
+    <!-- Widget page content -->
+    <div class="widget multiple-choice-widget">
+      <!-- Matching widget HTML -->
+    </div>
+  </section>
 </body>
 ```
 
