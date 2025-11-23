@@ -1,112 +1,78 @@
-# HTML Widget Page
 
-## What To Do
+# Variable Widget – Hello World CS Application
 
-In `assets/src/html/widget.html`, create a simple, interactive webpage—a "widget page"—that abstractly teaches 6th graders how to store and change a value in a variable.
+This repository contains my submission for the **Spring 2026 Curriculum Development Intern** position at **Hello World CS**.
 
-Starter code is provided for you in the `widget.html` file. Read the documentation in the `docs/` folder to familiarize yourself with the provided code.
+The widget in `assets/src/html/widget.html` is a short, interactive activity that teaches 6th graders how to store and change a value in a variable.
 
-## Getting Started
+---
 
-Create a copy of this template repository, which you'll use to save and submit your work.
+## About This Widget
 
-## Requirements
+The goal of the widget is to make the idea of a “variable” feel simple and concrete:
 
-As part of your widget page:
+- Students see a value stored in a “box”
+- They can change the value using interactive controls
+- The screen updates right away so they can connect the action they took with the new value
+- Explanations are written in plain language for 6th graders
 
-- Create and embed a new widget that includes at least one interactive element (button, slider, input field, etc.)
-- Provide visual feedback when the user interacts (something changes on screen)
-- Write simple explanation text appropriate for 6th graders
-- Ensure your code works in a modern browser (Chrome/Firefox/Safari)
-- Follow the framework and style guidelines in the `docs/` folder
-- Keep your code simple—no more than 150 lines total
+I followed the structure and style of the existing template and kept the code under the suggested length so it stays readable and easy to extend.
 
-## Example
+---
 
-See a (longer) example widget page in `assets/src/html/introduction-to-programming.html`. Your widget page should be much shorter: the intent is simply to show you what a full widget page looks like.
+## About Me
 
-## Submission
+I am a Computer Science student with experience in:
 
-Ensure your repository is publicly viewable. Then, share the link to your public GitHub repository in your application.
+- HTML, CSS, and JavaScript  
+- Building small interactive learning tools  
+- Explaining technical ideas to beginners
 
-**We will only use your submission for review purposes. Your submission will not be utilized in any curriculum product.**
+I am **currently taking an Educational Technology course**, which has helped me think more carefully about:
 
-## Timing
+- Writing clear learning objectives  
+- Scaffolding concepts for younger learners  
+- Designing simple interactions that support understanding instead of distracting from it  
 
-Creating your widget should take 2 hours or less. Do not spend more than 3 hours.
+This assignment was a fun way to connect that course with my CS background. I enjoy working at the intersection of **education and technology**, and I am excited about the chance to support K–12 students who are just starting their CS journey.
 
-## Run locally
+---
 
-There is no build step. Serve the repository root over a simple HTTP server and open the example HTML in a browser.
+## Why I’m Interested in Hello World CS
 
-Example (macOS / zsh):
+The Curriculum Development Intern role is a strong match for what I like to do:
+
+- Build interactive widgets with HTML, CSS, and JavaScript  
+- Collaborate on curriculum that is accessible and equitable  
+- Turn abstract CS concepts into friendly, hands-on activities  
+
+I especially like that Hello World CS focuses on **equity-focused curriculum** and on making CS feel welcoming to more students. That aligns with the kind of impact I would like to have as I grow as an educator and engineer.
+
+I hope this widget gives a small but clear example of how I think about teaching and interaction design.
+
+---
+
+## How to Run the Project Locally
+
+There is no build step. You can serve the repository with a simple HTTP server.
+
+From the repository root:
 
 ```bash
-cd /path/to/widget-template-1
+cd /path/to/repo
 python3 -m http.server 8000
-# then open http://localhost:8000/assets/src/html/widget.html
 ```
+
+Then open: `http://localhost:8000/assets/src/html/widget.html`
 
 Notes:
 
 - `WidgetPage.getAssetPath()` decides between a development root (`../..`) and a production path based on `window.location.hostname`. Serve files from `localhost` or `127.0.0.1` to use development paths.
 - Use modern browsers (Chrome/Firefox/Safari) and open files via `http://` so ES module imports work.
 
-## Minimal example (instantiate + register)
+---
 
-Copy this into `assets/src/html/widget.html` (or follow the existing example in that file):
+## Final Note
 
-```html
-<!-- minimal widget container -->
-<section class="my-widget" data-widget="multiple-choice">
-  <!-- widget markup: choices, feedback elements, etc. -->
-</section>
+Thank you for reviewing my submission — I’m excited to hear back and appreciate your time and consideration.
 
-<script type="module">
-  import { WidgetPage } from "../js/WidgetPage.js";
-  import { MultipleChoiceWidget } from "../js/MultipleChoiceWidget.js";
-
-  const page = new WidgetPage("My Widget Page", document.body);
-  // Initialize all matching widget containers
-  page.registerWidget(".my-widget", MultipleChoiceWidget);
-</script>
-```
-
-If you need help with asset filenames (sounds/images) or want me to add a complete sample widget markup, tell me which widget type to demonstrate.
-
-# HTML Widget Page
-
-## What To Do
-
-In `assets/src/html/widget.html`, create a simple, interactive webpage—a "widget page"—that abstractly teaches 6th graders how to store and change a value in a variable.
-
-Starter code is provided for you in the `widget.html` file. Read the documentation in the `docs/` folder to familiarize yourself with the provided code.
-
-## Getting Started
-
-Create a copy of this template repository, which you'll use to save and [submit](#submission) your work.
-
-## Requirements
-
-As part of your widget page...
-
-- Create and embed a new widget that includes at least one interactive element (button, slider, input field, etc.)
-- Provide visual feedback when the user interacts (something changes on screen)
-- Write simple explanation text appropriate for 6th graders
-- Ensure your code works in a modern browser (Chrome/Firefox/Safari)
-- Follow the framework and style guidelines in the `docs/` folder
-- Keep your code simple—no more than 150 lines total
-
-## Example
-
-See a (longer) example widget page in `assets/src/html/introduction-to-programming.html`. Your widget page should be much shorter: the intent is simply to show you what a full widget page looks like.
-
-## Submission
-
-Ensure your repository is publicly viewable. Then, share the link to your public GitHub repository in your application.
-
-**We will only use your submission for review purposes. Your submission will not be utilized in any curriculum product.**
-
-## Timing
-
-Creating your widget should take 2 hours or less. Do not spend more than 3 hours.
